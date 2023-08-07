@@ -17,3 +17,7 @@ let html = `
  <span>This blog has ${likes}</span>
  `;
 console.log(html);
+
+//nan and undefined
+let age;
+console.log(age, age + 3, "the age is ${age}");
