@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let a = 34 + 4;
+    let b = "string";
+    console.log(a);
+    console.log(b);
+    function hello() {
+      console.log("hello");
+    }
+    let obj = {
+      r: 24,
+      a: 45,
+      func: function name(num) {
+        console("the number is " + num);
+      },
+    };
+    //use of this
+    let myfunc = (number) => {
+      console.log("the number is " + this);
+    };
+    myfunc();
+
+    document.addEventListener("click", function click() {
+      console.log("clicked");
+      // alert("hello");
+      let conf = confirm("are u sure");
+      console.log(conf);
+    });
+
+    let arr = [1, 2, 3, 4, 5];
+
+    // for (let index = 0; index < array.length; index++) {
+    //   const element = array[index];
+
+    // }
+
+    //strict mode
+    // "use strict"
+    //callback functions
+    setTimeout(() => {
+      console.log("jfnuir");
+    }, 3000);
+
+    //promises
+  </script>
+  <body>
+    <p>I am learning js</p>
+  </body>
+</html>
