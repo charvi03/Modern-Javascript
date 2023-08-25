@@ -26,6 +26,10 @@
       getTodos("todos.json")
         .then((data) => {
           console.log("promise resolved", data);
+          return getTodos("todos.json");
+        })
+        .then((data) => {
+          console.log("second promise", data);
         })
         .catch((err) => {
           console.log("rejected", err);
