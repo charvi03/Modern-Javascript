@@ -7,11 +7,26 @@
   </head>
   <body>
     <script>
+      //returns a promise
       const getTodos = async () => {
         const response = await fetch("todos.json");
+        if (response.status !== 200) {
+          throw new Error("something went wrong");
+        }
+        const data = await response.json();
+
+        return data;
+        // console.log(data);
       };
-      const test = getTodos();
-      console.log(test);
+      console.log(1);
+      console.log(2);
+      getTodos()
+        .then((data) => console.log("resolved..", data))
+        .catch((err) => console.log("rejected", err));
+      console.log(3);
+      console.log(4);
+      // const test = getTodos();
+      // console.log(test);
     </script>
   </body>
 </html>
